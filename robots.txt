@@ -1,0 +1,4 @@
+User-agent: *
+
+allow: /
+https://markalcollective.com/sitemap.xml
