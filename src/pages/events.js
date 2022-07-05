@@ -19,6 +19,9 @@ const Wrapper = styled.div`
   img {
     width: 40%;
     margin-top:2rem;
+    @media(max-width: 1024px) {
+        width: 80%;
+    }
   }
 `
 

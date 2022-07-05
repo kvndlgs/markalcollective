@@ -49,6 +49,7 @@ span  {
     z-index:9999;
     @media(max-width:1024px){
         justify-content: center;
+        flex-direction: column;
     }
     span a {
         color: ${theme.colors.primary};
@@ -58,6 +59,9 @@ span  {
         margin: 0 0.4rem;
         font-size: ${theme.fontSizes.small};
         font-weight: 600;
+        @media(max-width:1024px){
+           border-bottom: 1px solid #f1f1f1;
+        }
         svg {
             margin: 0 0.2rem;
         }
