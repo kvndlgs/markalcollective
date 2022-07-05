@@ -61,7 +61,7 @@ const Beats = () => {
                 <h4> BIENTÔT </h4>
             </Box>
             <Box>
-                <h2> DRUNKEN' ZACK </h2>
+                <h2> DRUNKEN ZAC </h2>
                 <h4> BIENTÔT </h4>
             </Box>
 
