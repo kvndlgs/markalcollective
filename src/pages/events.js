@@ -3,7 +3,6 @@ import Layout from '../components/layout';
 import Seo from "../components/seo";
 import styled from 'styled-components';
 import {StaticQuery, graphql} from 'gatsby'
-import Flyer from '../images/final.png';
 
 
 
