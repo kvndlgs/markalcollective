@@ -11,11 +11,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-open-graph-images`,
-    {
-    resolve: `gatsby-transformer-json`,
-    options: {
-      typeName: `Json`,
-    },
+    `gatsby-transformer-json`,
     },
     {
     resolve: `gatsby-source-filesystem`,
