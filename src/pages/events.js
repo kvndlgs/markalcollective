@@ -31,7 +31,7 @@ const EventQuery = ({children}) => (
   <StaticQuery
      query={ graphql`
        query EventItemsQuery {
-          allEventItemJson {
+          allEventItemsJson {
             edges {
                node {
                  title
