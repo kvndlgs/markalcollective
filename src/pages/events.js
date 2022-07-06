@@ -31,7 +31,7 @@ const EventQuery = ({children}) => (
   <StaticQuery
      query={ graphql`
        query EventItemsQuery {
-          allEventItemsJson {
+          eventsJson {
             edges {
                node {
                  title
@@ -59,7 +59,7 @@ const EventQuery = ({children}) => (
 function getEvents(data) {
    {
                 const eventItemsArray = [];
-               data.allEventItemsJson.edges.forEach(item =>
+               data.eventsJson.edges.forEach(item =>
                  eventItemsArray.push(
                     
                         <div key={item.node}>
