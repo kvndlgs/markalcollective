@@ -39,7 +39,7 @@ const Box = styled.div`
  position: relative;
  display: flex;
  flex-direction: row;
- align-items: center;
+ align-items: qcenter;
  justify-content: space-around;
  padding: 4rem 0 4rem 0;
  max-width: 100%;
