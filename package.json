@@ -28,8 +28,8 @@
     "react-helmet": "^6.1.0",
     "react-player": "^2.9.0",
     "styled-components": "^5.3.3",
-    "gatsby-transformer-json": "*",
-    "gatsby-source-filesystem": "*"
+    "gatsby-transformer-json": "",
+    "gatsby-source-filesystem": ""
   },
   "devDependencies": {
     "@netlify/plugin-sitemap": "^0.8.1",
