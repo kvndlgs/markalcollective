@@ -159,7 +159,7 @@ const HeaderLayout = () => {
       <li className="item-logo"><MenuLink href="/"> <Logo /> </MenuLink></li>
       <li className="item">   <MenuLink href="/services">SERVICES</MenuLink></li>
       <li className="item"> <MenuLink href="/beats"> BEATS </MenuLink></li>
-      <li className="item">   <MenuLink href="/studio"> STUDIO </MenuLink></li>
+      <li className="item">   <MenuLink href="#"> STUDIO </MenuLink></li>
       <li className="item">   <MenuLink href="/medias">MEDIAS</MenuLink></li>
      <li className="item">    <MenuLink href="/events">ÉVÈNEMENTS</MenuLink> </li>
       <li className="item">  <MenuLink href="/contact">CONTACT</MenuLink></li>

@@ -2,7 +2,10 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from "../components/seo";
 import styled from 'styled-components';
+import {StaticQuery, graphql} from 'gatsby'
 import Flyer from '../images/final.png';
+
+
 
 
 const Wrapper = styled.div`
@@ -25,6 +28,55 @@ const Wrapper = styled.div`
   }
 `
 
+const EventQuery = ({children}) => (
+  <StaticQuery
+     query={ graphql`
+       query EventItemsQuery {
+          allEventItemJson {
+            edges {
+               node {
+                 title
+                 date
+                 time
+                 price
+                 place
+                 flyer
+               }
+            }
+          }
+       }
+     `
+     }
+     render={data => (
+        
+        <>
+            { getEvents(data) }
+        </>
+     )}
+  />
+  
+);
+
+function getEvents(data) {
+   {
+                const eventItemsArray = [];
+               data.allEventItemsJson.edges.forEach(item =>
+                 eventItemsArray.push(
+                    
+                        <div key={item.node}>
+                        <h2> { item.title } </h2>
+                        <span> {item.date} </span>
+                        <span> {item.time } </span>
+                        <span> { item.place } </span>
+                        <span> { item.price } </span>
+                        <img src={item.flyer} alt={item.title} />
+                        </div>
+                 )
+                );
+                return eventItemsArray;
+            } 
+}
+
 
 
 function Events() {
@@ -32,9 +84,7 @@ function Events() {
         <Layout>
             <Seo title="Évènements" />
             <Wrapper>
-          
-            <h1> ÉVÈNEMENTS </h1>
-                <img src={Flyer} />
+               <EventQuery />
             </Wrapper>
         </Layout>
     )

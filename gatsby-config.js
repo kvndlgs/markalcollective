@@ -12,6 +12,20 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-open-graph-images`,
     {
+    resolve: `gatsby-transformer-json`,
+    options: {
+      typeName: `Json`,
+    },
+    },
+    {
+    resolve: `source-filesystem`,
+    options: {
+       name: 'data',
+       path: `${__dirname}/src/data/`,
+    },
+    
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: false,

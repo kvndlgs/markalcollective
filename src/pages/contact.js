@@ -211,6 +211,10 @@ const StyledFormInput = styled.div`
      fill: #3e1955;
      }
  }
+ 
+ .error {
+  border: 0.2rem solid "red"
+ }
 `
 
 const encode = (data) => {

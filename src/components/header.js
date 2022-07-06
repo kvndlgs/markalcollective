@@ -125,7 +125,7 @@ const Header = () => {
       <Menu isOpen={isOpen}>
         <MenuLink href="/services">SERVICES</MenuLink>
         <MenuLink href="/beats"> BEATS </MenuLink>
-        <MenuLink href='/studio'> STUDIO </MenuLink>
+        <MenuLink href='#'> STUDIO </MenuLink>
         <MenuLink href="/medias">MEDIAS</MenuLink>
         <MenuLink href="/events" > ÉVÈNEMENTS </MenuLink>
         <MenuLink href="/contact">CONTACT</MenuLink>

@@ -51,6 +51,9 @@ body {
       gray1: "#F0EEF2",
       gray2: "#d7d0db",
       gray3: "#908299",
+      error: "red",
+      warning: "orange",
+      success: "green"
     },
     space: [0, 4, 8, 16, 32, 64, 128, 256, 5120],
     fonts:{

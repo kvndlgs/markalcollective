@@ -27,7 +27,9 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-player": "^2.9.0",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "gatsby-transformer-json": "@latest",
+    "source-filesystem": "@latest"
   },
   "devDependencies": {
     "@netlify/plugin-sitemap": "^0.8.1",
