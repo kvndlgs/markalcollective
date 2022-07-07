@@ -15,6 +15,7 @@ const Wrapper = styled.div`
 display: flex;
 position: relative;
 margin:0;
+padding:0;
 .logo {
   margin: 39vh auto;
   width: 216px;
@@ -33,8 +34,8 @@ margin:0;
 flex-direction: row;
  video {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   right:0;
   bottom:0;

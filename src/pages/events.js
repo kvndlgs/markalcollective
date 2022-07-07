@@ -2,31 +2,13 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from "../components/seo";
 import styled from 'styled-components';
-import {StaticQuery, graphql} from 'gatsby'
+// import {StaticQuery, graphql} from 'gatsby'
 
 
 
 
-const Wrapper = styled.div`
-  margin: 8rem auto;
-  width:100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content: center;
-  h1 {
-    margin-top: 1rem;
-  }
-  img {
-    width: 40%;
-    margin-top:2rem;
-    @media(max-width: 1024px) {
-        width: 80%;
-    }
-  }
-`
 
+  {/*
 const EventQuery = ({children}) => (
   <StaticQuery
      query={ graphql`
@@ -56,6 +38,8 @@ const EventQuery = ({children}) => (
   
 );
 
+
+
 function getEvents(data) {
    {
                 const eventItemsArray = [];
@@ -76,6 +60,59 @@ function getEvents(data) {
             } 
 }
 
+*/}
+
+const Wrapper = styled.div`
+  margin: 8rem auto;
+  width:100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+
+  }
+  
+  
+  .event {
+     display: flex;
+     flex-direction: column;
+     align-items: space-around;
+     justify-content: center;
+     ul {
+         list-style: none;
+         padding:0;
+         margin:0;
+         display: flex;
+         flex-direction: columb;
+     }
+       img {
+    width: 40%;
+    margin-top:2rem;
+    @media(max-width: 1024px) {
+        width: 80%;
+    }
+  }
+  
+  
+`
+
+
+function Event({time, date, title, hours, price, place, flyer}){
+    return (
+      <div className="event">
+         <h2> {title} </h2>
+         <ul>
+            <li> { date } </li>
+            <li> { hours } </li>
+            <li> { place } </li>
+            <li> { price } </li>
+         </ul>
+         <img src={flyer} alt={title} />
+      </div>
+      </>
+    )
+}
 
 
 function Events() {
@@ -83,7 +120,14 @@ function Events() {
         <Layout>
             <Seo title="Évènements" />
             <Wrapper>
-               <EventQuery />
+              <Event
+                 title="LA GÉNESE"
+                 date="16 JUIlLLET 2022"
+                 hours="7:00 PM"
+                 place="181 RUE BRIÈRE, ST-JEROME"
+                 price="15$"
+                 flyer="https://i.imgur.com/sNgF356.png"
+                 />
             </Wrapper>
         </Layout>
     )
