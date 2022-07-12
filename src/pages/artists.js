@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import Seo from "../components/seo";
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby'
-import {theme} from '../../theme'
+import {theme} from '../theme'
 
 
 
