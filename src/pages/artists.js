@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import Seo from "../components/seo";
 import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby'
+import {theme} from '../../theme'
 
 
 
@@ -11,6 +12,8 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: space-around;
+  justify-content: center;
      @media(max-width: 1024px){
       flex-direction: column;
       
@@ -23,15 +26,18 @@ const Wrapper = styled.div`
    max-width: 33.33%;
    height: auto;
    padding: 0.25rem;
+   border: 2px solid theme.colors.gray2;
+   border-radius: 0.2rem;
 
     .artist {
        
        display:flex;
-       flex-direction: column;;
+       flex-direction: column;
        img {
           align-self: start;
        }
        a {
+          align-self: space-around;
           margin: 0.2rem;
        }
     }
@@ -53,6 +59,7 @@ function Artists(){
               facebook
               insta
               youtube
+              spotify
             }
            }
        }
@@ -66,13 +73,14 @@ function getArtists(data) {
         <section className="artists" key={artist}>
         <article className="artist">
           <img src={artist.node.img}/>
-          <h1>{artist.node.name}</h1> 
+          <h2>{artist.node.name}</h2> 
           <p>{ artist.node.roles }</p>
           <p> { artist.node.bio }</p>
           <a href={artist.node.beatstars}>BEATSTARS</a>
           <a href={artist.node.facebook}>FACEBOOK</a>
           <a href={artist.node.insta}>INSTAGRAM</a>
           <a href={artist.node.youtube}>YOUTUBE</a>
+          <a href={artist.node.spotify}>SPOTIFY</a>
         </article>
       </section>
       )

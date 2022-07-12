@@ -4,10 +4,44 @@
         "name": "JOHELL",
         "roles": "Beatmaker, Compositeur, Interpète",
         "bio": "Ballin all day",
-        "beatstars": "beatstars.com",
+        "beatstars": "beatstars.com/markalcollective",
         "insta": "instagram.com",
         "facebook": "facebook.com",
-        "youtube": "youtube.com"
+        "youtube": "youtube.com",
+        "spotify": ""
+    },
+    {
+        "img": "",
+        "name": "LGTB",
+        "roles": "Beatmaker, Graphic Designer",
+        "bio": "Ballin all day",
+        "beatstars": "beatstars.com/lgtb",
+        "insta": "instagram.com",
+        "facebook": "facebook.com",
+        "youtube": "",
+        "spotify": ""
+    },
+    {
+        "img": "",
+        "name": "DRUNKEN ZAC",
+        "roles": "Beatmaker, Rapper",
+        "bio": "Ballin all day",
+        "beatstars": "beatstars.com/drunkenzac",
+        "insta": "instagram.com",
+        "facebook": "facebook.com",
+        "youtube": "youtube.com",
+        "spotify": ""
+    },
+    {
+        "img": "",
+        "name": "JBAG",
+        "roles": "Compositeur, Beatmaker, Interprète",
+        "bio": "Ballin all day",
+        "beatstars": "beatstars.com/jbag93",
+        "insta": "instagram.com",
+        "facebook": "https://www.facebook.com/profile.php?id=100067175491364",
+        "youtube": "https://m.youtube.com/channel/UCGFS0wQiW1w4d1dFID-tnog",
+          "spotify": "https://open.spotify.com/artist/4S933n6wVaXexSQo71aReb?si=qlOgaIMUSPai4QwmaEpeAg"
     },
     {
         "img": "../../images/louis.png",
@@ -17,36 +51,7 @@
         "beatstars": "beatstars.com",
         "insta": "instagram.com",
         "facebook": "facebook.com",
-        "youtube": "youtube.com"
-    },
-    {
-        "img": "",
-        "name": "LGTB",
-        "roles": "Beatmaker, Graphic Designer",
-        "bio": "Ballin all day",
-        "beatstars": "beatstars.com",
-        "insta": "instagram.com",
-        "facebook": "facebook.com",
-        "youtube": "youtube.com"
-    },
-    {
-        "img": "",
-        "name": "DRUNKEN ZAC",
-        "roles": "Beatmaker, Rapper",
-        "bio": "Ballin all day",
-        "beatstars": "beatstars.com",
-        "insta": "instagram.com",
-        "facebook": "facebook.com",
-        "youtube": "youtube.com"
-    },
-    {
-        "img": "",
-        "name": "JBAG",
-        "roles": "Beatmaker, Rapper",
-        "bio": "Ballin all day",
-        "beatstars": "beatstars.com",
-        "insta": "instagram.com",
-        "facebook": "facebook.com",
-        "youtube": "youtube.com"
+        "youtube": "youtube.com",
+        "spotify": ""
     }
 ]
