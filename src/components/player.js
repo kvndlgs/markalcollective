@@ -1,3 +1,4 @@
+{/*
 import React from 'react';
 import * as Icon from '@easy-eva-icons/react';
 // import './player.css';
@@ -462,3 +463,5 @@ export default class Player extends React.Component {
     )
   }
 }
+
+*/}

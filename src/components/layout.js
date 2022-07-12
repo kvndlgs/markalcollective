@@ -6,7 +6,7 @@ import  { createGlobalStyle } from "styled-components";
 import Footer from '../components/footer';
 import CustomerChat from "../components/messenger";
 import Seo from './seo';
-import theme from '../theme';
+import { theme } from '../theme';
 import 'normalize.css';
 
 
@@ -62,7 +62,8 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
-  color: 
+  color: theme.colors.gray1;
+  font-family: Ultra, serif;
 }
 
 small {

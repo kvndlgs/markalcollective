@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import Player from '../components/player';
+// import Player from '../components/player';
 import styled from 'styled-components';
 import Seo from "../components/seo"
 import { theme } from '../theme';
@@ -43,7 +43,7 @@ const Medias = () => {
             <Seo title="Medias" keywords="chansons, studio, saint-jerome, montreal, instrumentals, réalisation"/>
             <Bg />
             <Box>
-            <Player />
+   soon
             </Box>
         </Layout>
     )
