@@ -5,9 +5,37 @@ import styled from 'styled-components';
 import {useStaticQuery, graphql} from 'gatsby'
 
 
+
 const Wrapper = styled.div`
   margin: 8rem 0 4rem 0;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+     @media(max-width: 1024px){
+      flex-direction: column;
+      
+      .artists {
+        width: 100%;
+      }
+   }
+  
+  .artists {
+   max-width: 33.33%;
+   height: auto;
+   padding: 0.25rem;
+
+    .artist {
+       
+       display:flex;
+       flex-direction: column;;
+       img {
+          align-self: start;
+       }
+       a {
+          margin: 0.2rem;
+       }
+    }
+  }
 `
 
 function Artists(){
@@ -17,6 +45,7 @@ function Artists(){
        allArtistsJson {
          edges {
             node {
+              img
               name
               roles
               bio
@@ -34,8 +63,9 @@ function getArtists(data) {
     const artistsArray = [];
     data.allArtistsJson.edges.forEach(artist => {
       artistsArray.push(
-        <section className="artist-container" key={artist}>
+        <section className="artists" key={artist}>
         <article className="artist">
+          <img src={artist.node.img}/>
           <h1>{artist.node.name}</h1> 
           <p>{ artist.node.roles }</p>
           <p> { artist.node.bio }</p>

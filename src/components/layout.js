@@ -58,12 +58,11 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
+  font-weight: 800;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
   color: theme.colors.gray1;
-  font-family: Ultra, serif;
 }
 
 small {
@@ -161,7 +160,7 @@ h6 {
 
 
 p {
-  font-weight:500;
+  font-weight:600;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
