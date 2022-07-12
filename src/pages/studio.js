@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import LouisPic from '../images/louis.jpg';
 import JoPic from '../images/jo.jpg';
 import KevPic from '../images/kev.jpg';
-import SashPic from '../images/sasha.jpg';
 
 
 const Container = styled.div`

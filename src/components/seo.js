@@ -103,6 +103,9 @@ function Seo({ description, lang, meta, title }) {
       <meta name="og:image:width" content="1200" />
       <meta name="og:image:height" content="627" />
       <meta name="robots" content="index, follow" />
+      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;800&family=Ultra&display=swap" rel="stylesheet"></link>
       <meta name="google-site-verification" content="DGvyRCHjk1iSjoJR7gmW1NOVnh5xnWo2ORo4DenKY1w" />
       <script src="path/to/dist/eva-icons.js"></script>
       </Helmet>

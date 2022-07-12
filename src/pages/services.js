@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Mic from '../images/mic2.png';
 import Graphic from '../images/graphic1.png';
 import Piano from '../images/keyboard2.png';
-import Money from '../images/cash1.png';
 import { theme } from '../theme';
 import Aos from 'aos';
 import 'aos/dist/aos.css';

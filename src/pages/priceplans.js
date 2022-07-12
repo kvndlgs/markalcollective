@@ -100,12 +100,13 @@ box-shadow: 0 12px 12px 2px rgba(144,130,153,0.2);
     position: relative;
     background: #703B91;
     color: #fff;
-    border-radius:5px;
+    border-radius:0.25rem;
     text-decoration: none;
-    font-weight:700;
-    padding:20px 28px;
+    font-weight:600;
+    padding:0.8rem 1rem;
+    width: 220px;
     text-align:center;
-    font-size: 18px;
+    font-size: 1rem;
     border-bottom: 0.18rem solid #AA6CD0;
     border-top: 0.18rem solid transparent;
     cursor: pointer;
@@ -149,7 +150,7 @@ const PricePlans = () => {
             <Seo title="Tarifs" />
             <Container>
                 <PriceCard
-                    price="50$"
+                    price="35$"
                     rate="Par heure"
                 >
                     <li>
@@ -160,7 +161,7 @@ const PricePlans = () => {
                     </li>
                 </PriceCard>
                 <PriceCard
-                    price="150$"
+                    price="120$"
                     rate="Pour 4 heures"
                     isCenter
                 >
@@ -170,13 +171,11 @@ const PricePlans = () => {
                     <li>
                         <Icon.CheckmarkCircle2 />       Mixage
                     </li>
-                    <li>
-                        <Icon.CheckmarkCircle2 />    Mastering
-                    </li>
+
                 </PriceCard>
                 <PriceCard
-                    price="350$"
-                    rate="Pour 10 heures" à
+                    price="280$"
+                    rate="Pour 10 heures"
                     desc=""
                 >
                     <li>
@@ -184,9 +183,6 @@ const PricePlans = () => {
                     </li>
                     <li>
                         <Icon.CheckmarkCircle2 />        Mixage
-                    </li>
-                    <li>
-                        <Icon.CheckmarkCircle2 />         Mastering
                     </li>
                     <li>
                         <Icon.CheckmarkCircle2 />         Cover Art

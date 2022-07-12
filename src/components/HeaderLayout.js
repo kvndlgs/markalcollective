@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { theme } from '../theme';
 
 const MenuLink = styled(Link)`
-  margin: 0 1.4rem;
+  margin: 0 1rem;
   position: relative;
   cursor: pointer;
   text-decoration: none;
@@ -12,7 +12,7 @@ const MenuLink = styled(Link)`
   transition: all 0.3s ease-in;
   font-size: 0.74rem;
   letter-spacing:0.1rem;
-  font-weight: 800;
+  font-weight: 600;
   z-index:999;
   display: block;
   &:hover {
@@ -20,10 +20,10 @@ const MenuLink = styled(Link)`
   }
   @media(max-width:1024px) {
     width:100%;
-    margin-bottom: 2rem;
+    margin-bottom: 2.4rem;
     padding: 0.5rem;
-    font-size: 1.6rem;
-    line-height:2.6rem;
+    font-size: 1.4rem;
+    line-height:2.2rem;
   }
 `;
 
@@ -39,7 +39,7 @@ margin: 0 auto;
 top: 0;
 left: 0;
 right: 0;
-height:70px;
+height:74px;
 `;
 
 
@@ -49,7 +49,7 @@ const Menu = styled.ul`
   justify-content: space-around;
   align-items:center;
   position: relative;
-  width:80%;
+  width:68%;
   margin:0;
   padding:0;
   .item {
@@ -59,12 +59,13 @@ const Menu = styled.ul`
   .item-logo {
     flex:1;
     margin: 0;
+    top:2px;
     padding:0;
     position: relative;
-    top:4px;
     #logo {
-      width:60px;
+      width:58px;
     }
+
   }
   @media (max-width: 1024px) {
     width:100%;
@@ -83,13 +84,9 @@ const Menu = styled.ul`
     flex-direction: column;
     max-height: ${({ isOpen }) => (isOpen ? "100vh" : "0")};
     transition: all 0.6s cubic-bezier(0.5,0.2,0.5,0.8);
-    .item-logo {
-      flex:0;
+    #logo {
       display: none;
     }
-
-  
-
   }
 `;
 

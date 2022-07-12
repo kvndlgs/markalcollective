@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components';
-import { theme } from '../theme';
+// import { theme } from '../theme';
 
 
 
@@ -14,7 +14,7 @@ const MenuLink = styled(Link)`
   transition: all 0.3s ease-in;
   font-size: 0.74rem;
   letter-spacing:0.1rem;
-  font-weight: 800;
+  font-weight: 600;
   z-index:999;
   &:hover {
     color: #9855c2;
@@ -23,7 +23,7 @@ const MenuLink = styled(Link)`
     width:100%;
     margin-bottom: 2rem;
     padding: 0.5rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height:2rem;
   }
 `;

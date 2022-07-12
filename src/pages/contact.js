@@ -7,134 +7,20 @@ import styled from 'styled-components';
 
 import * as Icon from '@easy-eva-icons/react';
 
-{/*
-const StyledForm = styled.div`
-max-width:100%;
-height: auto;
-display: flex;
-justify-content:center;
-align-items:center;
-position: relative;
-padding:0 1.618rem;
-@media(max-width:1024px) {
-    padding:1rem;
-}
-form {
-margin: 14rem 0 7rem 0;
-position: relative;
-display: flex; 
-flex-direction: row;
-justify-content:space-around;
-align-items:center;
-height: auto;
-width:70%;
-border-radius:0.4rem;
-border:1px solid #908299;
-padding:0.5rem;
-@media(max-width:1024px) {
-    margin:6rem 0 6rem 0;
-    width:100%;
-    flex-direction: column;
-    height:auto;
-}
-
-#left,#right {
-    display: flex;
-    width:50%;
-    flex-direction: column;
-    position: relative;
-    height:auto;
-    padding: 2rem 4rem;
-    @media(max-width:1024px){
-        width:100%;
-    }
-
-
-
-
-
- input {
-    margin: 1.6rem auto;
-    width:100%;
-    height:40px;
-    padding: 16px;
-    border-radius:0.2rem;
-    border: 0.1rem solid #908299;
-    font-weight:700;
-    font-size: 0.87rem;
-    letter-spacing:0.06rem;
-    &:focus {
-        background: #908299;
-        color: #fff;
-    }
-    @media(max-width:1024px) {
-        margin: 0.5rem 0;
-    }
-}
-
-#textarea {
-    width:100%;
-    height: 300px;
-    padding:0px 16px;
-    margin:2.2rem 0 0.5rem 0;
-    border-radius:0.2rem;
-    border: 0.1rem solid #908299;
-    font-weight:700;
-    font-size: 0.87rem;
-    letter-spacing:0.06rem;
-    position: relative;
-    &:focus {
-        background: #908299;
-        color: #fff;
-    }
-    @media(max-width:1024px) {
-        margin: 0.5rem 0;
-    }
-}
-button {
-    max-width: 100%;
-    height:60px;
-    margin: 2.2rem 0;
-    font-weight:600;
-    padding:25px 0 -5px 0;
-    border-radius:0.2rem;
-    background: #3e1955;
-    color: #fff;
-    border-radius:0.23rem;
-    text-decoration: none;
-    font-weight:600;
-    border:none;
-    border-bottom: 0.22rem solid #9E50CE;
-    cursor: pointer;
-    position: relative;
-    &:hover {
-        background: #4B1E66;
-        transition: background 0.2s ease-in;
-      }
-}
-}
-}
-`
-
-*/}
-
-
-
 
 
 const StyledForm = styled.div`
   display: flex;
   justify-content:center;
   align-items:center;
-  height: 100%;
-  max-width:100%;
+  height: auto;
+  width:100%;
   position: relative;
-  margin-top:6rem;
-
+  margin:8rem 0 4rem 0;
   .flex-row {
       display: flex;
       flex-direction: row;
-      max-width:90%;
+      width:100%;
       align-items: space-around;
       @media(max-width:1024px) {
           flex-direction: column;
@@ -146,14 +32,14 @@ const StyledForm = styled.div`
        flex-direction: column;
        justify-content:center;
        align-items: space-around;
-       padding:3rem;
-       width:50%;
+       padding:1rem;
+       width:60%;
        height: auto;
        @media(max-width:1024px) {
-           width: 90%;
+           width: 100%;
        }
        button {
-        max-width: 90%;
+        width: 100%;
         height: 46px;
         margin: 40px 0;
         position: relative;
@@ -165,7 +51,6 @@ const StyledForm = styled.div`
         cursor: pointer;
         &:hover {
             background: #703B91;
-
         }
     }
    }
@@ -175,8 +60,7 @@ const StyledFormInput = styled.div`
  display: flex;
  flex-direction: column;
  justify-content:center;
- 
- margin: 0 auto;
+
  padding:0.5rem;
  width:100%;
  position: relative;
@@ -187,7 +71,7 @@ const StyledFormInput = styled.div`
  }
  input {
      height:46px;
-     max-width: 80%;
+     width:100%;
      padding: 0 40px;
      border-radius:6px;
      font-weight:600;
@@ -205,7 +89,7 @@ const StyledFormInput = styled.div`
 
  .icon {
      position: absolute;
-     top: 50px;
+     top: 44px;
      left: 24px;
      svg {
      fill: #3e1955;
@@ -248,8 +132,7 @@ const Contact = () => {
     return (
         <Layout>
             <Seo title="Contact" keywords="studio d'enregistrement, saint-jerome, musique studio, instrumentals " />
-    
-  
+
             <StyledForm>
                 <form
                     className="form"
@@ -324,8 +207,7 @@ const Contact = () => {
                             ENVOYER
                         </button>
                 </form>
-            </StyledForm>
-      
+            </StyledForm>      
         </Layout>
     )
 }
