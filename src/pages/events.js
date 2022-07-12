@@ -59,7 +59,7 @@ function getEvents(data) {
         <p>{ event.node.place }</p>
         <p> { event.node.time }</p>
         <p>{event.node.price }</p>
-        <img src={event.node.flyer} alt={event.node.title} />
+        <img src={event.node.flyer}  />
       </article>
     </section>
     )
