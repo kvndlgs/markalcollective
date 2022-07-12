@@ -1,15 +1,8 @@
 import React from 'react';
 import * as Icon from '@easy-eva-icons/react';
 // import './player.css';
-import Song1 from '../audio/zombie.mp3';
-import song2 from '../audio/borderline.mp3';
-import song3 from '../audio/switchedup.mp3'
-import cv1 from '../images/pp.png';
-import cv2 from '../images/lost_cover.png';
-import cv3 from '../images/kennykage.png';
-import cv4 from '../images/rose.png';
-import cv5 from '../images/flocon.png';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 
 
 
@@ -233,14 +226,37 @@ width:94%;
 `
 
 export default class Player extends React.Component {
+
+  const data = graphql`
+     query songsQuery {
+        data.allSongsJson {
+          edges {
+            node {
+              name
+              author
+              img
+              audio
+              duration 
+            }
+          }
+        }
+     }
+  `
+  
+  const getSongs = (data) => { 
+    const songsArray = []
+    
+    data.allSongsJson.edges.forEach(song => {
+       songsArray.push(data)
+    })
+    
+    return songsArray
+  }
+  
   state = {
     index: 0,
     currentTime: '0:00',
-    musicList: [
-      { name: 'KAGE', author: 'Kenny', img: cv3, audio: song2, duration: '3:13' },
-      { name: 'La danse des mort-vivants', author: 'Porte Parole', img: cv1, audio: Song1, duration: '2:26' },
-      { name: 'Lost', author: 'Jo-Hell', img: cv2, audio: "", duration: '2:28' }
-    ],
+    musicList: getSongs(data),
     pause: false,
   };
 
