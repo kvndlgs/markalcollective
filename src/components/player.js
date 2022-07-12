@@ -256,7 +256,7 @@ export default class Player extends React.Component {
   state = {
     index: 0,
     currentTime: '0:00',
-    musicList: getSongs(data),
+    musicList: [],
     pause: false,
   };
 

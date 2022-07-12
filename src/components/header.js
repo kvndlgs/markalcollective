@@ -22,7 +22,7 @@ const MenuLink = styled(Link)`
   @media(max-width:1024px) {
     width:100%;
     margin-bottom: 2rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     font-size: 1.4rem;
     line-height:2rem;
   }
@@ -47,7 +47,7 @@ const Menu = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  max-width:90%;
+  max-width:88%:
   margin:0 auto;
   @media (max-width: 1024px) {
     text-align:center;
