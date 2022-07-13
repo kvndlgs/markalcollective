@@ -1,4 +1,4 @@
-{/*
+
 import React from 'react';
 import * as Icon from '@easy-eva-icons/react';
 // import './player.css';
@@ -248,16 +248,16 @@ export default class Player extends React.Component {
     const songsArray = []
     
     data.allSongsJson.edges.forEach(song => {
-       songsArray.push(data)
+       songsArray.push(song)
     })
     
-    return songsArray
+    return songsArray;
   }
   
   state = {
     index: 0,
     currentTime: '0:00',
-    musicList: [],
+    musicList: getSongs(data),
     pause: false,
   };
 
@@ -405,7 +405,7 @@ export default class Player extends React.Component {
       <Card>
         <CurrentSong>
           <audio ref={ref => this.playerRef = ref}>
-            <source src={currentSong.audio} type="audio/ogg" />
+            <source src={data.allSongsJson.audio} type="audio/ogg" />
             Your browser does not support the audio element.
           </audio>
           <ImgWrap>
@@ -463,5 +463,3 @@ export default class Player extends React.Component {
     )
   }
 }
-
-*/}
