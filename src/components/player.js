@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-{/*
-=======
->>>>>>> f8c906848f461a37e4a93eb83bfcb97cb99d8696
+
+/*
 
 import React from 'react';
 import * as Icon from '@easy-eva-icons/react';
@@ -243,22 +241,8 @@ data = graphql` 
           thumbnail
           duration
         }
-<<<<<<< HEAD
       }
     }
-=======
-     }
-  `
-  
-  const getSongs = (data) => { 
-    const songsArray = []
-    
-    data.allSongsJson.edges.forEach(song => {
-       songsArray.push(song)
-    })
-    
-    return songsArray;
->>>>>>> f8c906848f461a37e4a93eb83bfcb97cb99d8696
   }
 `
 
@@ -274,11 +258,7 @@ render(){
   state = {
     index: 0,
     currentTime: '0:00',
-<<<<<<< HEAD
     songList: data.allStrapiSong.edges[0].node,
-=======
-    musicList: getSongs(data),
->>>>>>> f8c906848f461a37e4a93eb83bfcb97cb99d8696
     pause: false,
   };
 
@@ -426,11 +406,7 @@ render(){
       <Card>
         <CurrentSong>
           <audio ref={ref => this.playerRef = ref}>
-<<<<<<< HEAD
             <source src={currentSong.src} type="audio/ogg" />
-=======
-            <source src={data.allSongsJson.audio} type="audio/ogg" />
->>>>>>> f8c906848f461a37e4a93eb83bfcb97cb99d8696
             Your browser does not support the audio element.
           </audio>
           <ImgWrap>
@@ -486,11 +462,4 @@ render(){
         </PlayList>
       </Card>
     )
-  }
-<<<<<<< HEAD
-
-
-*/}
-=======
-}
->>>>>>> f8c906848f461a37e4a93eb83bfcb97cb99d8696
+              */ 
