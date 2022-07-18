@@ -1,7 +1,7 @@
 {/*
+
 import React from 'react';
 import * as Icon from '@easy-eva-icons/react';
-// import './player.css';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
@@ -224,40 +224,40 @@ width:94%;
     position: relative;
 }
 }
-`
 
+`
 export default class Player extends React.Component {
 
-  const data = graphql`
-     query songsQuery {
-        data.allSongsJson {
-          edges {
-            node {
-              name
-              author
-              img
-              audio
-              duration 
-            }
-          }
+data = graphql` 
+  query {
+    allStrapiSong {
+      edges {
+        node {
+          id
+          title
+          author
+          src
+          thumbnail
+          duration
         }
-     }
-  `
-  
-  const getSongs = (data) => { 
-    const songsArray = []
-    
-    data.allSongsJson.edges.forEach(song => {
-       songsArray.push(data)
-    })
-    
-    return songsArray
+      }
+    }
   }
-  
+`
+
+render(){
+  return (
+    <div>
+      fuck you
+    </div>
+  )
+}
+
+ 
   state = {
     index: 0,
     currentTime: '0:00',
-    musicList: [],
+    songList: data.allStrapiSong.edges[0].node,
     pause: false,
   };
 
@@ -338,17 +338,17 @@ export default class Player extends React.Component {
   }
 
   updatePlayer = () => {
-    const { musicList, index } = this.state;
-    const currentSong = musicList[index];
+    const { songList, index } = this.state;
+    const currentSong = songList[index];
     const audio = new Audio(currentSong.audio);
     this.playerRef.load();
   }
 
   nextSong = () => {
-    const { musicList, index, pause } = this.state;
+    const { songList, index, pause } = this.state;
 
     this.setState({
-      index: (index + 1) % musicList.length
+      index: (index + 1) % songList.length
     });
     this.updatePlayer();
     if (pause) {
@@ -357,10 +357,10 @@ export default class Player extends React.Component {
   };
 
   prevSong = () => {
-    const { musicList, index, pause } = this.state;
+    const { songList, index, pause } = this.state;
 
     this.setState({
-      index: (index + musicList.length - 1) % musicList.length
+      index: (index + songList.length - 1) % songList.length
     });
     this.updatePlayer();
     if (pause) {
@@ -370,8 +370,8 @@ export default class Player extends React.Component {
 
 
   playOrPause = () => {
-    const { musicList, index, pause } = this.state;
-    const currentSong = musicList[index];
+    const { songList, index, pause } = this.state;
+    const currentSong = songList[index];
     const audio = new Audio(currentSong.audio);
     if (!this.state.pause) {
       this.playerRef.play();
@@ -399,19 +399,19 @@ export default class Player extends React.Component {
 
 
   render() {
-    const { musicList, index, currentTime, pause } = this.state;
-    const currentSong = musicList[index];
+    const {songList, index, currentTime, pause } = this.state;
+    const currentSong = songList[index];
     return (
       <Card>
         <CurrentSong>
           <audio ref={ref => this.playerRef = ref}>
-            <source src={currentSong.audio} type="audio/ogg" />
+            <source src={currentSong.src} type="audio/ogg" />
             Your browser does not support the audio element.
           </audio>
           <ImgWrap>
-            <img src={currentSong.img} alt={currentSong.name}/>
+            <img src={currentSong.thumbnail} alt={currentSong.title}/>
           </ImgWrap>
-          <SongName>{currentSong.name}</SongName>
+          <SongName>{currentSong.title}</SongName>
           <SongAutor>{currentSong.author}</SongAutor>
 
           <Time>
@@ -438,17 +438,17 @@ export default class Player extends React.Component {
 
         </CurrentSong>
         <PlayList>
-          {musicList.map((music, key = 0) =>
+          {songList.map((song, key = 0) =>
             <div key={key}
               onClick={() => this.clickAudio(key)}
               className={"track " +
                 (index === key && !pause ? 'current-audio' : '') +
                 (index === key && pause ? 'play-now' : '')} >
 
-              <img className="track-img" src={music.img} />
+              <img className="track-img" src={song.thumbnail} />
               <div className="track-discr" >
-                <span className="track-name" >{music.name}</span>
-                <span className="track-author" >{music.author}</span>
+                <span className="track-name" >{song.title}</span>
+                <span className="track-author" >{song.author}</span>
               </div>
               <span className="track-duration" >
                 {(index === key)
@@ -462,6 +462,6 @@ export default class Player extends React.Component {
       </Card>
     )
   }
-}
+
 
 */}

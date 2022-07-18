@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from "../components/seo";
 import styled from 'styled-components';
-import {useStaticQuery, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 
 
@@ -32,46 +32,16 @@ const Wrapper = styled.div`
 
 
 function Events(){
-  const data =  useStaticQuery(graphql`
-  query EventsQuery {
-     allEventsJson {
-       edges {
-          node {
-            title
-            date
-            time
-            price
-            place
-            flyer
-          }
-         }
-     }
-  }
-`)
-
-function getEvents(data) {
-  const eventsArray = [];
-  data.allEventsJson.edges.forEach(event => {
-    eventsArray.push(
-      <section className="event-container" key={event}>
-      <article className="event">
-        <h1>{event.node.title}</h1> 
-        <p>{ event.node.place }</p>
-        <p> { event.node.time }</p>
-        <p>{event.node.price }</p>
-        <img src={event.node.flyer}  />
-      </article>
-    </section>
-    )
-  })
-  return eventsArray;
-}
-
   return (
     <Layout>
       <Seo title="Évènements" />
       <Wrapper>
-        { getEvents(data) }
+        <div className="upcoming">
+         <h2> ÈVÈVEMENTS A VENIR </h2>
+        </div>
+        <div className="past">
+          <h2> ÉVÈNEMENTS PASSÉS </h2>
+        </div>
       </Wrapper>
     </Layout>
   )

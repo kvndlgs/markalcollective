@@ -59,7 +59,7 @@ const Menu = styled.ul`
   .item-logo {
     flex:1;
     margin: 0;
-    top:2px;
+    top:3px;
     padding:0;
     position: relative;
     #logo {

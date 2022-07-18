@@ -1,13 +1,20 @@
-[
-{
-  "title" : "LA GÉNESE",
-  "date": "16 JUILLET 2022",
-  "time": "7:00 PM",
-  "price": "15.00$",
-  "place": "181 RUE BRIÈRE, ST-JEROME",
-  "flyer": "https://i.imgur.com/vXawIgr.jpg"
-},
-{
-  "title": "BEAUCOUP À VENIR. STAY TUNED!"
-}
+[ 
+    {
+        "past": {
+            "title": "LA GÉNÈSE",
+            "date": "16 JUILLET 2022",
+            "place": "181 RUE BRIÈRE",
+            "price": [{"at_door": "15.00$"}, {"presale": "null"}],
+            "flyer": "",
+            "video": ""
+        },
+        "upcoming": {
+            "title": "EXODUS",
+            "date": "31 AÔUT 2022",
+            "place": "181 RUE BRIÊRE",
+            "price": [{"at_door": "25.00$"}, {"presale": "20.00"}],
+            "flyer": "",
+            "video": ""
+        }
+    }
 ]

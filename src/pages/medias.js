@@ -1,6 +1,5 @@
-import React from "react";
+import * as React from "react";
 import Layout from "../components/layout";
-// import Player from '../components/player';
 import styled from 'styled-components';
 import Seo from "../components/seo"
 import { theme } from '../theme';
@@ -37,13 +36,16 @@ const Bg = styled.div`
      padding-bottom: 14rem;
  }
 `
-const Medias = () => {
+
+
+function Medias(){
+
     return (
         <Layout>
             <Seo title="Medias" keywords="chansons, studio, saint-jerome, montreal, instrumentals, réalisation"/>
             <Bg />
             <Box>
-   soon
+               yo
             </Box>
         </Layout>
     )

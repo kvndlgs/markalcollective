@@ -34,6 +34,7 @@ body {
   padding:0;
   max-height:100vh;
   max-width:100vw;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
@@ -185,7 +186,9 @@ position: relative;
 margin:0;
 padding:0;
 .logo {
-  margin: 41vh auto;
+  margin: 50vh auto;
+  position: relative;
+  top:-90px;
   width: 180px;
   align-self:center;
   justify-self:center;
@@ -195,7 +198,8 @@ padding:0;
   }
  @media(max-width: 1024px){
    width:170px;
-   margin: 36vh auto;
+   margin: 50vh auto;
+   top: -85px;
  }
 }
 
@@ -210,6 +214,7 @@ flex-direction: row;
   top: 0;
   left: 0;
   z-index:-1;
+  overflow: hidden;
  }
  
 `

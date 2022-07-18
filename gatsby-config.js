@@ -1,3 +1,8 @@
+require("dotenv").config({
+  path: `.env${process.env.NODE_ENV}`,
+})
+
+
 module.exports = {
   siteMetadata: {
     title: `Markal Collective`,
@@ -5,13 +10,14 @@ module.exports = {
     author: `@kvds`,
     siteUrl: `https://markalcollective.com`,
     ogImage: `src/images/ogimages.png`,
-    keywords: `studio d'enregistrement, saint-jerome, www.ssfinance.ca, instrumentals, concpetion graphique, beats, hip-hop`,
+    keywords: `studio d'enregistrement, saint-jerome, instrumentals, concpetion graphique, beats, hip-hop`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-open-graph-images`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -40,7 +46,7 @@ module.exports = {
         start_url: `/`,
         theme_color: `#3e1955`,
         display: `standalone`,
-        icon: `src/icons/icon-32x32.png`,
+        icon: `src/icons/icon-32x32.png`
     },
   },
   {
