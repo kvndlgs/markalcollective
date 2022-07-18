@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from "../components/seo";
 import styled from 'styled-components';
-import {graphql} from 'gatsby'
+import {useStaticQuery, graphql, Link} from 'gatsby'
 
 
 
@@ -15,14 +15,14 @@ const Wrapper = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  .event-container {
-    width: 50%;
-    margin: 1rem 0;
-    @media(max-width:1024px) {
-      width: 80%;
-    }
+  padding:2rem 4rem;
+  align-items: flex-start;
+  .upcoming {
+    padding:4rem;
+  }
+
+  .past {
+    padding: 4rem;
   }
 }
 `
@@ -32,15 +32,71 @@ const Wrapper = styled.div`
 
 
 function Events(){
+  const data = useStaticQuery(graphql`
+   query EventsQuery {
+    allEventsJson {
+      edges {
+        node {
+        upcoming {
+          title
+          place
+          flyer
+          video
+          price {
+            at_door
+            presale
+          }
+        }
+        past {
+          title
+          place
+          flyer
+          video
+          price {
+            at_door
+            presale
+          }
+        }
+      }
+     }
+    }
+   }
+  `)
+
+  function getUpcomingEvents(data){
+    const eventsArray = [];
+    data.allEventsJson.edges.forEach(event => {
+      eventsArray.push(
+        <div key={event}>
+         <h2> SHOW A VENIR </h2>
+         <Link to="#"><h4> { event.node.upcoming.title }</h4> </Link>
+       </div>
+      )
+    })
+    return eventsArray
+  }
+  
+  function getPastEvents(data){
+    const eventsArray = [];
+    data.allEventsJson.edges.forEach(event => {
+      eventsArray.push(
+        <div key={event}>
+          <h2> SHOW PASSÉS </h2>
+         <h3> { event.node.past.title }</h3> 
+       </div>
+      )
+    })
+    return eventsArray;
+  }
   return (
     <Layout>
       <Seo title="Évènements" />
       <Wrapper>
         <div className="upcoming">
-         <h2> ÈVÈVEMENTS A VENIR </h2>
+         { getUpcomingEvents(data)}
         </div>
         <div className="past">
-          <h2> ÉVÈNEMENTS PASSÉS </h2>
+          { getPastEvents(data)}
         </div>
       </Wrapper>
     </Layout>

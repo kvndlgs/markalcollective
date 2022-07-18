@@ -45,7 +45,7 @@ function Medias(){
             <Seo title="Medias" keywords="chansons, studio, saint-jerome, montreal, instrumentals, réalisation"/>
             <Bg />
             <Box>
-               yo
+               <h1 style={{padding: '6rem'}}> BIENTÔT! </h1>
             </Box>
         </Layout>
     )
