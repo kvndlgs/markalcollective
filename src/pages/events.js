@@ -10,25 +10,48 @@ import {useStaticQuery, graphql, Link} from 'gatsby'
 
 
 const Wrapper = styled.div`
-  margin-top: 8rem;
+  margin-top: 6rem;
   width:100vw;
   height: auto;
   display: flex;
   flex-direction: column;
   padding:2rem 4rem;
   align-items: flex-start;
+
+    h3 {
+    color: #BA92D3;
+    }
+  
+  
+  h4 {
+    color: #d7d0db;
+    font-weight: 400;
+  }
+
   .upcoming {
     padding:4rem;
+    border-bottom:2px solid gray;
+    width:100%;
+    height: auto;
   }
 
   .past {
     padding: 4rem;
+  }
+
+  .hero {
+    align-self: center;
   }
 }
 `
 
 
 
+const Divider = styled.div`
+ width: 75%;
+ height:4px;
+ background: #f2f2f2;
+`
 
 
 function Events(){
@@ -67,9 +90,10 @@ function Events(){
     const eventsArray = [];
     data.allEventsJson.edges.forEach(event => {
       eventsArray.push(
-        <div key={event}>
-         <h2> SHOW A VENIR </h2>
-         <Link to="#"><h4> { event.node.upcoming.title }</h4> </Link>
+        <div className="upcoming" key={event}>
+         <h4> Á VENIR </h4>
+         <h3> { event.node.upcoming.title }</h3>
+         <Link to="#"> PLUS D'INFO </Link>
        </div>
       )
     })
@@ -80,9 +104,10 @@ function Events(){
     const eventsArray = [];
     data.allEventsJson.edges.forEach(event => {
       eventsArray.push(
-        <div key={event}>
-          <h2> SHOW PASSÉS </h2>
-         <h3> { event.node.past.title }</h3> 
+        <div className="past" key={event}>
+          <h4> ARCHIVES </h4>
+        <h3> { event.node.past.title }</h3> 
+        <Link to="#"> PLUS D'INFO </Link>
        </div>
       )
     })
@@ -90,14 +115,16 @@ function Events(){
   }
   return (
     <Layout>
-      <Seo title="Évènements" />
+      <Seo title="Events" />
       <Wrapper>
-        <div className="upcoming">
-         { getUpcomingEvents(data)}
+        <div className="hero">
+        <h2> ÉVÈNEMENTS </h2>
         </div>
-        <div className="past">
-          { getPastEvents(data)}
-        </div>
+
+         { getUpcomingEvents(data) }
+         <Divider />
+          { getPastEvents(data) }
+
       </Wrapper>
     </Layout>
   )

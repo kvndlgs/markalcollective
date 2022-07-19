@@ -90,7 +90,7 @@ function getArtists(data) {
   
     return (
       <Layout>
-        <Seo title="L'ÉQUIPE" />
+        <Seo title="Artistes" />
         <Wrapper>
           { getArtists(data) }
         </Wrapper>

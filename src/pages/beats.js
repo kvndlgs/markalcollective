@@ -32,7 +32,7 @@ const Box = styled.div`
 const Beats = () => {
     return (
         <Layout style={{paddingTop: '4rem'}}>
-            <Seo title="Instrumentals" />
+            <Seo title="Beats" />
             <div style={{marginTop: '8rem', alignSelf: 'center', textAlign: 'center', width: '100%'}}>
             <h1> BEATS </h1>
             </div>
