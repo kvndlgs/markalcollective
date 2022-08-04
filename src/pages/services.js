@@ -179,7 +179,7 @@ const Services = () => {
              nous mettrons notre expertise a votre service.'
              smallDesc=""
              buttonText="VOIR LES TARIFS"
-             url="/priceplans"
+             url="#"
             />
             <Service 
              filled
